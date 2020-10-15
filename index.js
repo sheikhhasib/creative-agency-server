@@ -128,7 +128,7 @@ client.connect(err => {
             res.send(result.insertedCount > 0);
         })
     })
-    app.post('/allAdmin',(req, res)=>{
+    app.post('/isAdmin',(req, res)=>{
         const email = req.body.email;
         AdminCollection.find({email: email})
         .toArray((err, documents) => {
