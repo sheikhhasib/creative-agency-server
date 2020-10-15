@@ -51,7 +51,7 @@ client.connect(err => {
             $set: { status: req.body.status },
         })
             .then((result) => {
-                res.send(result.modifiedCount > 0)
+                res.send(result.modifiedCount)
             })
     })
 
